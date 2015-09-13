@@ -3,3 +3,7 @@ language: go
 go:
   - 1.2.1
   - tip
+
+addons:
+  artifacts: true
+  s3_region: "us-west-2"
