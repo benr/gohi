@@ -7,7 +7,6 @@ jobs:
   build:
     docker:
       - image: circleci/golang:1.9
-
     working_directory: /go/src/github.com/benr/gohi
     steps:
       - checkout
@@ -17,7 +16,6 @@ jobs:
       - store_artifacts:
           path: /go/src/github.com/benr/gohi/gohi
           destination: gohi
-
   test:
     docker:
       - image: circleci/golang:1.9
@@ -25,10 +23,8 @@ jobs:
     steps:
       - run: ./gohi
 
-workflows:
+workflow:
   version: 2
   jobs:
     - build
-    - test:
-      requires:
-        - build
+    - test
