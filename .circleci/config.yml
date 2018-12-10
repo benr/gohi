@@ -25,11 +25,9 @@ jobs:
     steps:
       - run: ./gohi
 
-workflow:
+workflows:
   version: 2
   build_n_test:
     jobs:
       - build
-      - test:
-        requires:
-          - build
+      - test
