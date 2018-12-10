@@ -27,4 +27,6 @@ workflow:
   version: 2
   jobs:
     - build
-    - test
+    - test:
+      require:
+        - build
