@@ -25,6 +25,7 @@ jobs:
     steps:
       - attach_workspace:
           at: /tmp/workspace
+      - run: ls -l /tmp/workspace
       - run: /tmp/workspace/gohi
 
 workflows:
