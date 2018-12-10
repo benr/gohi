@@ -1,7 +1,4 @@
-# Golang CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-go/ for more details
-version: 2
+version: 2.1
 
 jobs:
   build:
@@ -18,7 +15,7 @@ jobs:
           path: /go/src/github.com/benr/gohi/gohi
           destination: gohi
 
-  test:
+  runme:
     docker:
       - image: circleci/golang:1.9
     working_directory: /go/src/github.com/benr/gohi
@@ -30,6 +27,6 @@ workflows:
   build_n_test:
     jobs:
       - build
-      - test:
-        requires:
-          - build
+      - runme:
+          requires:
+            - build
