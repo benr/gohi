@@ -30,4 +30,6 @@ workflows:
   build_n_test:
     jobs:
       - build
-      - test
+      - test:
+        requires:
+          - build
