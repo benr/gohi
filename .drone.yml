@@ -15,7 +15,7 @@ steps:
   - pwd
   - ls -alh
   - ls -alh /
-  - echo "Hello from Drone: Dumping environment:"
+  - echo 'Hello from Drone... Dumping environment:'
   - env
   - echo "moving on...."
 
@@ -23,6 +23,7 @@ steps:
 - name: Pack
   image: ubuntu
   commands: 
+  - ls -alh 
   - ls -alh /
   - sleep 120
   - echo "All done"
