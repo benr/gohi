@@ -15,8 +15,8 @@ steps:
   - pwd
   - ls -alh
   - ls -alh /
-  - echo "Hello from Drone"
-  - exit 1
+  - echo "Hello from Drone: Dumping environment:"
+  - env
   - echo "moving on...."
 
 
