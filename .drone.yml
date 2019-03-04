@@ -16,8 +16,9 @@ steps:
   - ls -alh
   - ls -alh /
   - echo "Hello from Drone"
-  - sleep 120
+  - exit 1
   - echo "moving on...."
+
 
 - name: Pack
   image: ubuntu
