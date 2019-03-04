@@ -7,3 +7,22 @@ steps:
   commands:
   - go build
   - go test
+  - sleep 120
+
+- name: Test
+  image: alpine
+  commands:
+  - pwd
+  - ls -alh
+  - ls -alh /
+  - echo "Hello from Drone"
+  - sleep 120
+  - echo "moving on...."
+
+- name: Pack
+  image: ubuntu
+  commands: 
+  - ls -alh /
+  - sleep 120
+  - echo "All done"
+
